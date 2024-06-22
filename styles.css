@@ -1,0 +1,426 @@
+/* BODY */
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    background-color: #FFE4C4; /* Light beige background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* NAVIGATION BAR */
+nav {
+    background: #A0522D; /* Dark brown background */
+    color: white; /* White text */
+    padding: 10px 0; /* Vertical padding */
+    position: fixed; /* Fix position at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to top */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+nav ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove margin */
+}
+
+nav ul li.left {
+    margin: 0 30px; /* Side margin */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li.center {
+    flex: 1; /* Take remaining space */
+    margin: 0 0px 0 160px; /* Left margin */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    font-size: 30px; /* Larger font */
+}
+
+nav ul li.right {
+    margin: 0 30px; /* Side margin */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    text-align: center; /* Center text */
+}
+
+nav ul li a {
+    display: block; /* Block-level link */
+    padding: 10px; /* Padding */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+    background: #8B4513; /* Darker brown on hover */
+}
+
+nav ul li a img.nav-icon {
+    height: 35px; /* Fixed height */
+    vertical-align: middle; /* Align with text */
+    margin: 0 30px; /* Side margin */
+}
+
+/* CONTENT */
+.container {
+    width: 50%; /* 50% width */
+    margin: auto; /* Center horizontally */
+    background: #DEB887; /* Light brown background */
+    padding: 20px; /* Padding */
+    margin-bottom: 100px; /* Bottom margin */
+    margin-top: 150px; /* Top margin */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    text-align: center; /* Center text */
+}
+
+/* HOME PAGE */
+#welcome p {
+    color: black; /* Black text */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+#welcome button {
+    display: inline-block; /* Inline-block button */
+    padding: 10px 20px; /* Padding */
+    margin: 10px; /* Margin */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #CD853F; /* Brown background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+}
+
+#welcome button:hover {
+    background-color: #8B4513; /* Darker brown on hover */
+}
+
+/* NEW TASK PAGE */
+.page {
+    display: none; /* Hide by default */
+}
+
+.page.active {
+    display: block; /* Show active page */
+}
+
+.page h1 {
+    text-align: center; /* Center text */
+}
+
+table.task, table.completed-task {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove gaps */
+    border-style: none; /* No border */
+    margin-top: 20px; /* Top margin */
+}
+
+table.task th, table.task td, table.completed-task th, table.completed-task td {
+    border-style: none; /* No border */
+    padding: 8px; /* Padding */
+    text-align: center; /* Center text */
+}
+
+table.task th {
+    color: black; /* Black text */
+}
+
+td img {
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+}
+
+/* ADD TASK FORM */
+form {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+}
+
+form input, form select, form button {
+    padding: 10px; /* Padding */
+    margin: 5px 0; /* Vertical margin */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+}
+
+form button {
+    display: inline-block; /* Inline-block button */
+    background-color: #CD853F; /* Brown background */
+    color: white; /* White text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+form button:hover {
+    background-color: #8B4513; /* Darker brown on hover */
+}
+
+/* SORT BUTTONS  */
+.filters {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out buttons */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+.filters button {
+    padding: 10px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #CD853F; /* Brown background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.filters button:hover {
+    background-color: #8B4513; /* Darker brown on hover */
+}
+
+#priority-buttons {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out buttons */
+    margin-top: 10px; /* Top margin */
+}
+
+/* LIST OF TASKS AND COMPLETED TASKS */
+#task-list, #completed-task-list {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+#task-list li, #completed-task-list li {
+    background: white; /* White background */
+    margin: 10px 0; /* Vertical margin */
+    padding: 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+}
+
+#task-list li.complete {
+    text-decoration: line-through; /* Strikethrough for completed tasks */
+}
+
+/* ADD TASK BUTTON AND COMPLETED BUTTON */
+.button-link {
+    background-color: #CD853F; /* Brown background */
+    color: white; /* White text */
+}
+
+.button-link a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+}
+
+.button-link:hover {
+    color: white; /* Keep white text on hover */
+}
+
+#settings-form {
+    text-align: left; /* Left-align text */
+}
+
+#settings-form h3 {
+    margin-top: 20px; /* Top margin */
+}
+
+/* SETTINGS: FONT */
+#font-preview {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+}
+
+.font-button {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    flex-wrap: nowrap; /* No wrapping */
+}
+
+.font-button-container {
+    width: 200px; /* Fixed width */
+    margin: 10px; /* Margin */
+    text-align: center; /* Center text */
+}
+
+.font-preview {
+    width: 100px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    object-fit: cover; /* Fit image */
+}
+
+/* FONT: ARIAL */
+body.arial, body.arial #welcome button, body.arial form, body.arial form input, body.arial form button, body.arial #theme-preview theme-button-container {
+    font-family: Arial, sans-serif; /* Arial font */
+}
+
+/* FONT: GEORGIA */
+body.georgia, body.georgia #welcome button, body.georgia form, body.georgia form input, body.georgia form button, body.georgia #theme-preview button {
+    font-family: Georgia, serif; /* Georgia font */
+}
+
+/* FONT: COURIER NEW */
+body["Courier New"], body["Courier New"] #welcome button, body["Courier New"] form, body["Courier New"] form input, body["Courier New"] form button, body["Courier New"] #theme-preview button {
+    font-family: 'Courier New', monospace; /* Courier New font */
+}
+
+/* SETTINGS: THEME */
+#theme-preview {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+}
+
+.theme-button {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    flex-wrap: nowrap; /* No wrapping */
+}
+
+.theme-button-container {
+    margin: 10px; /* Margin */
+    text-align: center; /* Center text */
+}
+
+.theme-preview {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Fit image */
+    margin-top: 5px; /* Top margin */
+}
+
+/* THEME: SPRING */
+body.spring { /* body */
+    background-color: #ffede6; /* Light pink background */
+}
+body.spring nav, body.spring button, body.spring #welcome button { /* nav, theme button */
+    background-color: #ffb6c1; /* Light pink background */
+}
+.spring .container { /* container */
+    background: #e6ffcc; /* Light green background */
+}
+body.spring nav ul li a:hover, body.spring button:hover, body.spring #welcome button:hover, body.spring footer { /* theme button hover, footer */
+    background-color: #ffbf80; /* Light orange background */
+}
+
+/* THEME: SUMMER */
+body.summer { /* body */
+    background-color: #ccfff2; /* Light blue-green background */
+}
+body.summer nav, body.summer button, body.summer #welcome button { /* nav, theme button */
+    background-color: #b3b3ff; /* Light blue background */
+}
+.summer .container { /* container */
+    background: #80ffbf; /* Light green background */
+}
+body.summer nav ul li a:hover, body.summer button:hover, body.summer #welcome button:hover, body.summer footer { /* theme button hover, footer */
+    background-color: #ff80aa; /* Light pink background */
+}
+
+/* THEME: AUTUMN */
+body.autumn { /* body */
+    background-color: #b3e6cc; /* Light green background */
+}
+body.autumn nav, body.autumn button, body.autumn #welcome button { /* nav, theme button */
+    background-color: #d2a679; /* Light brown background */
+}
+.autumn .container { /* container */
+    background: #d6d6c2; /* Light gray background */
+}
+body.autumn nav ul li a:hover, body.autumn button:hover, body.autumn #welcome button:hover, body.autumn footer { /* theme button hover, footer */
+    background-color: #d279a6; /* Light pink background */
+}
+
+/* THEME: WINTER */
+body.winter { /* body */
+    background-color: #f2e6ff; /* Light purple background */
+}
+body.winter nav, body.winter button, body.winter #welcome button { /* nav, theme button */
+    background-color: #4775d1; /* Light blue background */
+}
+.winter .container { /* container */
+    background: #c2f0f0; /* Light blue-green background */
+}
+body.winter nav ul li a:hover, body.winter button:hover, body.winter #welcome button:hover, body.winter footer { /* theme button hover, footer */
+    background-color: #666699; /* Light purple background */
+}
+
+/* ABOUT */
+.page h1 {
+    color: black; /* Black text */
+}
+
+.page p {
+    color: black; /* Black text */
+}
+
+.team {
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Space out items */
+    flex-wrap: wrap; /* Wrap items */
+}
+
+.member {
+    margin: 10px; /* Margin */
+    text-align: center; /* Center text */
+}
+
+.member img {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Fit image */
+}
+
+.info {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: white; /* White text */
+    padding: 10px; /* Padding */
+    border-radius: 0; /* No rounding */
+    margin-top: 10px; /* Top margin */
+}
+
+.info p {
+    color: white; /* White text */
+}
+
+.banner img {
+    width: 15%; /* 15% width */
+    height: auto; /* Auto height */
+}
+
+/* POPUP BAR */
+.popup-bar {
+    display: none; /* Hide by default */
+    background-color: #333; /* Dark gray background */
+    color: white; /* White text */
+    padding: 10px; /* Padding */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1001; /* Ensure it stays on top */
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+    text-align: center; /* Center text */
+    width: 80%; /* 80% width */
+    max-width: 300px; /* Max width */
+}
+
+/* FOOTER */
+footer {
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding */
+    background: #A0522D; /* Dark brown background */
+    color: white; /* White text */
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    bottom: 0; /* Align to bottom */
+}
